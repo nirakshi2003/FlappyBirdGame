@@ -12,7 +12,7 @@ The objective is to navigate the bird through the gaps between the pipes without
 ## 🚀 Features
 - Smooth and responsive controls.
 - Increasing difficulty with progress.
-- Retro-style graphics and sound effects.
+- Retro-style graphics.
 - Score tracking.
 
 ## Play the game here :
