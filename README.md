@@ -51,8 +51,8 @@ To run the game locally:
 2. Open `index.html` in your web browser.
 
 ## Screenshots
-![Game Start](game_image/game start.png)
-![Game Over](game_image/game over.png)
+![Game Start](game_image/gamestart.png)
+![Game Over](game_image/gameover.png)
 
 ### Play The Game Here : 
 https://nirakshi2003.github.io/FlappyBirdGame/ 
