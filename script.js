@@ -1,3 +1,17 @@
+//load sound files
+const playsound=new Audio(play.mp3);
+const collisionsound=new Audio(gameover.mp3);
+
+//function to play playing bg music
+function playingsound() {
+    playsound.play();
+}
+
+//function to play the collision sound or the gameover sound
+function playcollisionsound() {
+    collisionsound.play();
+}
+
 //canvas
 let board;          //represents the html canvas element
 let boardwidth=360; //the bg image is 360*640 so...
@@ -88,6 +102,7 @@ function update(){
 
     if (bird.y > board.height){ //if the bird's vertical position goes beyond the bottom edge of the canvas, the game is marked as over
         gameover=true;
+        playcollisionsound(); //gameover... so play the sound
     }
 
     //pipes
@@ -103,6 +118,7 @@ function update(){
 
         if (detectcollision(bird, pipe)){   //checks if the bird has collided with a pipe. If true, the game is marked as over
             gameover=true;
+            playcollisionsound();   //gameover... so play the sound
         }
     }
 
@@ -164,6 +180,7 @@ function movebird(e) {  //handles the events that cause the bird to jump and als
     if (e.type === "keydown" && (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX")){
         //jump bird
         velocityy = -6; //sets the vertical velocity velocityy to -6, causing the bird to move upward when the key is pressed
+        playingsound(); //play the moving sound
 
         //reset game
         if (gameover){  //if the game is over, reset the game state
@@ -176,6 +193,7 @@ function movebird(e) {  //handles the events that cause the bird to jump and als
     else if (e.type === "mousedown"){
         //jump bird
         velocityy = -6; //sets the vertical velocity velocityy to -6, causing the bird to move upward when the key is pressed
+        playingsound(); //play the moving sound
 
         //reset game
         if (gameover){  //if the game is over, reset the game state
